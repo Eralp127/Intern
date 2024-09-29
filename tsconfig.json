@@ -40,6 +40,7 @@
   ],
   "exclude": [
     "node_modules",
+    "public",
     "public/workbox-4754cb34.js" // Exclude Workbox file
   ]
 }

@@ -6,7 +6,6 @@ import {
   ChevronRight,
   Code2,
   Frame,
-  SearchCheck,
   Eye,
   MonitorSmartphone,
 } from "lucide-react";
@@ -27,11 +26,6 @@ import {
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
 
-const aboutStats = [
-  { label: "Years of experience", value: "3+" },
-  { label: "Technologies mastered", value: "5+" },
-  { label: "Companies worked with", value: "15+" },
-];
 
 const projects = [
   {
@@ -258,8 +252,8 @@ export default function Home() {
             <h2 className="py-16  pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
             I am Eralp Kurdas, currently a data analyst intern at a financial institution, focusing on improving data quality and automation processes. 
             My work involves analyzing incoming data and ensuring accurate reporting to optimize decision-making across departments. 
-            I aim to enhance the bank's accrual processes through automation, reducing inefficiencies and errors.
-            </h2>            
+            I aim to enhance the accrual processes through automation, reducing inefficiencies and errors.
+            </h2>
           </div>
         </section>
 

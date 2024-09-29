@@ -58,12 +58,6 @@ const projects = [
     image: "/assets/wrona.jpeg",
     href: "https://www.wrona.com/",
   },
-  {
-    title: "This website",
-    description: "My personal website",
-    image: "/assets/portfolio.webm",
-    href: "https://github.com/wendoj/portfolio",
-  },
 ];
 
 const services = [
@@ -190,9 +184,9 @@ export default function Home() {
               data-scroll-speed=".09"
               className="flex flex-row items-center space-x-1.5"
             >
-              <span className={styles.pill}>next.js</span>
-              <span className={styles.pill}>tailwindcss</span>
-              <span className={styles.pill}>typescript</span>
+              <span className={styles.pill}>Data Analysis</span>
+              <span className={styles.pill}>Automatation</span>
+              <span className={styles.pill}>Process Analysis</span>
             </div>
             <div>
               <h1
@@ -202,11 +196,11 @@ export default function Home() {
                 data-scroll-direction="horizontal"
               >
                 <span className="text-6xl tracking-tighter text-foreground 2xl:text-8xl">
-                  Hello, I&apos;m
+                  Internship portfolio of
                   <br />
                 </span>
                 <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
-                  CJ.
+                  Eralp Kurdas
                 </span>
               </h1>
               <p
@@ -215,37 +209,8 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
               >
-                An experienced full-stack website developer with a passion for
-                crafting unique digital experiences.
+                Welcome to the detailed documentation of my internship experience.
               </p>
-            </div>
-            <span
-              data-scroll
-              data-scroll-enable-touch-speed
-              data-scroll-speed=".06"
-              className="flex flex-row items-center space-x-1.5 pt-6"
-            >
-              <Link href="mailto:wendoj@proton.me" passHref>
-                <Button>
-                  Get in touch <ChevronRight className="ml-1 h-4 w-4" />
-                </Button>
-              </Link>
-              <Button
-                variant="outline"
-                onClick={() => scrollTo(document.querySelector("#about"))}
-              >
-                Learn more
-              </Button>
-            </span>
-
-            <div
-              className={cn(
-                styles.scroll,
-                isScrolled && styles["scroll--hidden"],
-              )}
-            >
-              Scroll to discover{" "}
-              <TriangleDownIcon className="mt-1 animate-bounce" />
             </div>
           </div>
           <div
@@ -255,7 +220,7 @@ export default function Home() {
             className="mt-14 h-full w-full xl:mt-0"
           >
             <Suspense fallback={<span>Loading...</span>}>
-              <Spline scene="/assets/scene.splinecode" />
+              <Spline scene="/assets/trails.spline" />
             </Suspense>
           </div>
         </section>
@@ -303,7 +268,6 @@ export default function Home() {
 
         {/* Projects */}
         <section id="projects" data-scroll-section>
-          {/* Gradient */}
           <div className="relative isolate -z-10">
             <div
               className="absolute inset-x-0 -top-40 transform-gpu overflow-hidden blur-[100px] sm:-top-80 lg:-top-60"
@@ -320,17 +284,15 @@ export default function Home() {
           </div>
           <div data-scroll data-scroll-speed=".4" className="my-64">
             <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
-              ✨ Projects
+              ✨ Main Documents
             </span>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
-              Streamlined digital experiences.
+              Main components of documentation
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I&apos;ve worked on a variety of projects, from small websites to
-              large-scale web applications. Here are some of my favorites:
+              A list of documents that have paved the way for my internship project:
             </p>
 
-            {/* Carousel */}
             <div className="mt-14">
               <Carousel setApi={setCarouselApi} className="w-full">
                 <CarouselContent>
@@ -430,27 +392,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact */}
-        <section id="contact" data-scroll-section className="my-64">
-          <div
-            data-scroll
-            data-scroll-speed=".4"
-            data-scroll-position="top"
-            className="flex flex-col items-center justify-center rounded-lg bg-gradient-to-br from-primary/[6.5%] to-white/5 px-8 py-16 text-center xl:py-24"
-          >
-            <h2 className="text-4xl font-medium tracking-tighter xl:text-6xl">
-              Let&apos;s work{" "}
-              <span className="text-gradient clash-grotesk">together.</span>
-            </h2>
-            <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I&apos;m currently available for freelance work and open to
-              discussing new projects.
-            </p>
-            <Link href="mailto:wendoj@proton.me" passHref>
-              <Button className="mt-6">Get in touch</Button>
-            </Link>
-          </div>
-        </section>
       </div>
     </Container>
   );

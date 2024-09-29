@@ -1,7 +1,6 @@
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { MailIcon } from "lucide-react";
+import { ChevronUp } from "lucide-react"; // Using an up arrow icon for "Go to Top"
 
 export default function Footer() {
   // get the current time in UTC+1 time zone
@@ -22,29 +21,31 @@ export default function Footer() {
     return () => clearInterval(interval);
   }, []);
 
+  // Function to scroll to the top of the page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scroll effect
+    });
+  };
+
   return (
     <footer className="w-full bg-gradient-to-t from-primary/[1%] to-transparent">
       <div className="container mx-auto flex flex-row items-center justify-between py-6">
         <span className="flex flex-row items-center space-x-4">
-          <p className="text-xs text-muted-foreground">
-            SEM-5 2024
-          </p>
+          <p className="text-xs text-muted-foreground">INTERN5-CMK</p>
           <hr className="hidden h-6 border-l border-muted md:flex" />
           <span className="flex hidden flex-row items-center space-x-2 md:flex">
             <p className="text-xs text-muted-foreground">Local time:</p>
             <p className="text-sm font-semibold">{time} UTC+1</p>
           </span>
         </span>
-        <Link
-          href="mailto:Eralp127@outlook.com"
-          passHref
-          className="text-xs text-muted-foreground hover:text-foreground"
-        >
-          <Button variant={"outline"}>
-            <MailIcon className="h-4 w-4 md:mr-2" />
-            <span className="hidden md:flex">Eralp127@outlook.com</span>
-          </Button>
-        </Link>
+
+        {/* Go to Top Button */}
+        <Button variant={"outline"} onClick={scrollToTop}>
+          <ChevronUp className="h-4 w-4 md:mr-2" />
+          <span className="hidden md:flex">Go to Top</span>
+        </Button>
       </div>
       <div className="h-1 bg-[radial-gradient(closest-side,#8486ff,#42357d,#5d83ff,transparent)] opacity-50" />
     </footer>

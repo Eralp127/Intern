@@ -35,61 +35,55 @@ const aboutStats = [
 
 const projects = [
   {
-    title: "Unqueue",
-    description: "E-commerce platform for selling digital products",
-    image: "/assets/unqueue.webm",
-    href: "https://unqueue.shop/",
+    title: "PDF Project",
+    description: "Project Plan - Click to download",
+    image: "/assets/project_screen.png",
+    href: "/assets/Project_plan (1).pdf",
   },
   {
-    title: "InfiniteVPS",
-    description: "High performance VPS hosting solution",
-    image: "/assets/infinitevps.webm",
+    title: "COMING SOON",
+    description: "Work in progress",
+    image: "/assets/WIP.jpg",
     href: "#",
   },
   {
-    title: "TranslateBot",
-    description: "Powerful Multilingual Translation Bot for Discord",
-    image: "/assets/translate_bot.webm",
-    href: "https://translatebot.app/",
+    title: "COMING SOON",
+    description: "Work in progress",
+    image: "/assets/WIP.jpg",
+    href: "#",
   },
   {
-    title: "Wrona",
-    description: "Robotics-focused technology company",
-    image: "/assets/wrona.jpeg",
-    href: "https://www.wrona.com/",
+    title: "COMING SOON",
+    description: "Work in progress",
+    image: "/assets/WIP.jpg",
+    href: "#",
   },
 ];
 
-const services = [
+const products = [
   {
-    service: "Frontend Development",
+    service: "Discover",
     description:
       "Creating stellar user interfaces and web experiences using the latest technologies.",
-    icon: Code2,
+    icon: Eye,
   },
   {
-    service: "UX Design",
+    service: "Define",
     description:
       "Building intuitive, user-centric designs that drive engagement and conversion.",
     icon: Frame,
   },
   {
-    service: "SEO Optimization",
+    service: "Develop",
     description:
       "Enhancing your website's visibility in search engines for increased organic traffic.",
-    icon: SearchCheck,
+    icon: Code2,
   },
   {
-    service: "Responsive Design",
+    service: "Deliver",
     description:
       "Designing websites that look and perform equally well on all devices and screen sizes.",
     icon: MonitorSmartphone,
-  },
-  {
-    service: "Backend Development",
-    description:
-      "Developing robust, scalable server-side logic for a wide range of web applications.",
-    icon: Eye,
   },
 ];
 
@@ -184,9 +178,9 @@ export default function Home() {
               data-scroll-speed=".09"
               className="flex flex-row items-center space-x-1.5"
             >
-              <span className={styles.pill}>Data Analysis</span>
+              <span className={styles.pill}>Data analysis</span>
+              <span className={styles.pill}>Business analysis</span>
               <span className={styles.pill}>Automatation</span>
-              <span className={styles.pill}>Process Analysis</span>
             </div>
             <div>
               <h1
@@ -196,7 +190,7 @@ export default function Home() {
                 data-scroll-direction="horizontal"
               >
                 <span className="text-6xl tracking-tighter text-foreground 2xl:text-8xl">
-                  Internship portfolio of
+                  Internship portfolio by
                   <br />
                 </span>
                 <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
@@ -209,8 +203,36 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
               >
-                Welcome to the detailed documentation of my internship experience.
+                Welcome to the detailed documentation of my internship experience
               </p>
+            </div>
+            <span
+              data-scroll
+              data-scroll-enable-touch-speed
+              data-scroll-speed=".06"
+              className="flex flex-row items-center space-x-1.5 pt-6"
+            >
+              <Link href="#" passHref>
+                <Button>
+                  Work in progress dont click <ChevronRight className="ml-1 h-4 w-4" />
+                </Button>
+              </Link>
+              <Button
+                variant="outline"
+                onClick={() => scrollTo(document.querySelector("#about"))}
+              >
+                Learn more
+              </Button>
+            </span>
+
+            <div
+              className={cn(
+                styles.scroll,
+                isScrolled && styles["scroll--hidden"],
+              )}
+            >
+              Scroll to discover{" "}
+              <TriangleDownIcon className="mt-1 animate-bounce" />
             </div>
           </div>
           <div
@@ -220,7 +242,7 @@ export default function Home() {
             className="mt-14 h-full w-full xl:mt-0"
           >
             <Suspense fallback={<span>Loading...</span>}>
-              <Spline scene="/assets/trails.spline" />
+              <Spline scene="/assets/order.spline" />
             </Suspense>
           </div>
         </section>
@@ -234,40 +256,16 @@ export default function Home() {
             className="my-14 flex max-w-6xl flex-col justify-start space-y-10"
           >
             <h2 className="py-16  pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
-              I&apos;m an experienced full-stack developer proficient in{" "}
-              <Link
-                href="https://create.t3.gg/"
-                target="_blank"
-                className="underline"
-              >
-                TypeScript, Tailwind, and Next.js
-              </Link>{" "}
-              since 2021. My experience spans from startups to mid-sized
-              companies, where I&apos;ve been instrumental in the entire product
-              design process; from ideation and wireframing, through
-              prototyping, to the delivery of the final product, all while
-              efficiently collaborating with cross-functional teams.
-            </h2>
-            <div className="grid grid-cols-2 gap-8 xl:grid-cols-3">
-              {aboutStats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col items-center text-center xl:items-start xl:text-start"
-                >
-                  <span className="clash-grotesk text-gradient text-4xl font-semibold tracking-tight xl:text-6xl">
-                    {stat.value}
-                  </span>
-                  <span className="tracking-tight text-muted-foreground xl:text-lg">
-                    {stat.label}
-                  </span>
-                </div>
-              ))}
-            </div>
+            I am Eralp Kurdas, currently a data analyst intern at a financial institution, focusing on improving data quality and automation processes. 
+            My work involves analyzing incoming data and ensuring accurate reporting to optimize decision-making across departments. 
+            I aim to enhance the bank's accrual processes through automation, reducing inefficiencies and errors.
+            </h2>            
           </div>
         </section>
 
         {/* Projects */}
         <section id="projects" data-scroll-section>
+          {/* Gradient */}
           <div className="relative isolate -z-10">
             <div
               className="absolute inset-x-0 -top-40 transform-gpu overflow-hidden blur-[100px] sm:-top-80 lg:-top-60"
@@ -284,15 +282,16 @@ export default function Home() {
           </div>
           <div data-scroll data-scroll-speed=".4" className="my-64">
             <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
-              ✨ Main Documents
+              ✨ Projects
             </span>
             <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
-              Main components of documentation
+              Projects in the spotlight
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              A list of documents that have paved the way for my internship project:
+              I am actively developing several products. Notable projects that have reached a significant stage of development will be showcased below.
             </p>
 
+            {/* Carousel */}
             <div className="mt-14">
               <Carousel setApi={setCarouselApi} className="w-full">
                 <CarouselContent>
@@ -344,7 +343,7 @@ export default function Home() {
         </section>
 
         {/* Services */}
-        <section id="services" data-scroll-section>
+        <section id="products" data-scroll-section>
           <div
             data-scroll
             data-scroll-speed=".4"
@@ -363,18 +362,17 @@ export default function Home() {
             >
               <div className="flex flex-col py-6 xl:p-6">
                 <h2 className="text-4xl font-medium tracking-tight">
-                  Need more info?
+                  Product
                   <br />
                   <span className="text-gradient clash-grotesk tracking-normal">
-                    I got you.
+                    Summary.
                   </span>
                 </h2>
                 <p className="mt-2 tracking-tighter text-secondary-foreground">
-                  Here are some of the services I offer. If you have any
-                  questions, feel free to reach out.
+                  Here are all the products i made with hyperlinks for easy access
                 </p>
               </div>
-              {services.map((service) => (
+              {products.map((service) => (
                 <div
                   key={service.service}
                   className="flex flex-col items-start rounded-md bg-white/5 p-14 shadow-md backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:shadow-md"
@@ -390,8 +388,7 @@ export default function Home() {
               ))}
             </motion.div>
           </div>
-        </section>
-
+        </section>        
       </div>
     </Container>
   );

@@ -35,9 +35,9 @@ const projects = [
     href: "/assets/Project_plan (1).pdf",
   },
   {
-    title: "COMING SOON",
-    description: "Work in progress",
-    image: "/assets/WIP.jpg",
+    title: "LeesWijzer",
+    description: "LeesWijzer - Click to download",
+    image: "/assets/Leeswijzer.png",
     href: "#",
   },
   {
@@ -441,6 +441,7 @@ function Gradient() {
               <stop stopColor="#9A70FF" />
               <stop offset={1} stopColor="#838aff" />
             </linearGradient>
+            
           </defs>
         </svg>
       </div>

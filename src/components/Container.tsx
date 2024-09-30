@@ -83,7 +83,7 @@ export default function Container(props: ContainerProps) {
   const router = useRouter();
   const meta = {
     title: "Eralp Kurdas Portfolio",
-    description: `Full-stack website developer and TypeScript enthusiast.`,
+    description: `Sem5-intern.`,
     image: "/assets/logo.webp",
     type: "website",
     ...customMeta,

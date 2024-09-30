@@ -105,7 +105,7 @@ const products = [
     icon: Wrench,
     description: "Products",
     downloads: [
-      { name: "Logboek", href: "Logboek.pdf" },
+      { name: "Logboek", href: "/assets/Logboek.pdf" },
       { name: "Placeholder", href: "#"},
       { name: "Placeholder", href: "#"},
       { name: "Placeholder", href: "#"}

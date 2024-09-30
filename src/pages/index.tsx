@@ -8,6 +8,7 @@ import {
   Frame,
   Eye,
   MonitorSmartphone,
+  Wrench,
 } from "lucide-react";
 import { TriangleDownIcon } from "@radix-ui/react-icons";
 import Spline from "@splinetool/react-spline";
@@ -58,6 +59,7 @@ const products = [
   {
     service: "Discover phase",
     icon: Eye,
+    description: "Products",
     downloads: [
       { name: "Project Plan", href: "/assets/Project_plan__2_.pdf"},
       { name: "Expertinterview Accruals retail", href: "#"},
@@ -68,6 +70,7 @@ const products = [
   {
     service: "Define phase",
     icon: Frame,
+    description: "Products",
     downloads: [
       { name: "Placeholder", href: "#"},
       { name: "Placeholder", href: "#"},
@@ -78,6 +81,7 @@ const products = [
   {
     service: "Develop phase",
     icon: Code2,
+    description: "Products",
     downloads: [
       { name: "Placeholder", href: "#"},
       { name: "Placeholder", href: "#"},
@@ -88,6 +92,7 @@ const products = [
   {
     service: "Deliver phase",
     icon: MonitorSmartphone,
+    description: "Products",
     downloads: [
       { name: "Placeholder", href: "#"},
       { name: "Placeholder", href: "#"},
@@ -97,7 +102,8 @@ const products = [
   },
   {
     service: "Other documents",
-    icon: MonitorSmartphone,
+    icon: Wrench,
+    description: "Products",
     downloads: [
       { name: "Logboek", href: "Logboek.pdf" },
       { name: "Placeholder", href: "#"},

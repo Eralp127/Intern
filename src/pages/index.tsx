@@ -38,7 +38,7 @@ const projects = [
     title: "LeesWijzer",
     description: "LeesWijzer - Click to download",
     image: "/assets/Leeswijzer.png",
-    href: "#",
+    href: "/assets/Project_Report.pdf",
   },
   {
     title: "COMING SOON",

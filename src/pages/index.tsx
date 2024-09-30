@@ -412,7 +412,7 @@ export default function Home() {
                     {service.service}
                   </span>
                   <span className="mt-2 tracking-tighter text-muted-foreground">
-                    {service.description}
+                    {service.description ? service.description : "No description available"}
                   </span>
 
                   {/* If the product has downloads, render them */}

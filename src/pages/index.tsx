@@ -32,7 +32,7 @@ const projects = [
     title: "PDF Project",
     description: "Project Plan - Click to download",
     image: "/assets/project_screen.png",
-    href: "/assets/Project_plan (1).pdf",
+    href: "/assets/Project_plan__2_.pdf",
   },
   {
     title: "LeesWijzer",
@@ -56,30 +56,56 @@ const projects = [
 
 const products = [
   {
-    service: "Discover",
-    description:
-      "Creating stellar user interfaces and web experiences using the latest technologies.",
+    service: "Discover phase",
     icon: Eye,
+    downloads: [
+      { name: "Project Plan", href: "/assets/Project_plan__2_.pdf"},
+      { name: "Expertinterview Accruals retail", href: "#"},
+      { name: "Expertinterview accruals finance", href: "#"},
+      { name: "Expertinterview accruals workflow", href: "#"}
+    ], // No downloads for this phase
   },
   {
-    service: "Define",
-    description:
-      "Building intuitive, user-centric designs that drive engagement and conversion.",
+    service: "Define phase",
     icon: Frame,
+    downloads: [
+      { name: "Placeholder", href: "#"},
+      { name: "Placeholder", href: "#"},
+      { name: "Placeholder", href: "#"},
+      { name: "Placeholder", href: "#"}
+    ], // No downloads for this phase
   },
   {
-    service: "Develop",
-    description:
-      "Enhancing your website's visibility in search engines for increased organic traffic.",
+    service: "Develop phase",
     icon: Code2,
+    downloads: [
+      { name: "Placeholder", href: "#"},
+      { name: "Placeholder", href: "#"},
+      { name: "Placeholder", href: "#"},
+      { name: "Placeholder", href: "#"}
+    ],
   },
   {
-    service: "Deliver",
-    description:
-      "Designing websites that look and perform equally well on all devices and screen sizes.",
+    service: "Deliver phase",
     icon: MonitorSmartphone,
+    downloads: [
+      { name: "Placeholder", href: "#"},
+      { name: "Placeholder", href: "#"},
+      { name: "Placeholder", href: "#"},
+      { name: "Placeholder", href: "#"}
+    ], // No downloads for this phase
   },
-];
+  {
+    service: "Other documents",
+    icon: MonitorSmartphone,
+    downloads: [
+      { name: "Logboek", href: "Logboek.pdf" },
+      { name: "Placeholder", href: "#"},
+      { name: "Placeholder", href: "#"},
+      { name: "Placeholder", href: "#"}
+    ],
+  },
+]
 
 export default function Home() {
   const refScrollContainer = useRef(null);
@@ -117,7 +143,6 @@ export default function Home() {
 
         if (li.getAttribute("href") === `#${current}`) {
           li.classList.add("nav-active");
-          console.log(li.getAttribute("href"));
         }
       });
     }
@@ -174,7 +199,7 @@ export default function Home() {
             >
               <span className={styles.pill}>Data analysis</span>
               <span className={styles.pill}>Business analysis</span>
-              <span className={styles.pill}>Automatation</span>
+              <span className={styles.pill}>Automation</span>
             </div>
             <div>
               <h1
@@ -197,7 +222,7 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
               >
-                Welcome to the detailed documentation of my internship experience
+                Welcome to the detailed documentation of my internship experience.
               </p>
             </div>
             <span
@@ -208,7 +233,8 @@ export default function Home() {
             >
               <Link href="#" passHref>
                 <Button>
-                  Work in progress dont click <ChevronRight className="ml-1 h-4 w-4" />
+                  Work in progress don’t click{" "}
+                  <ChevronRight className="ml-1 h-4 w-4" />
                 </Button>
               </Link>
               <Button
@@ -222,7 +248,7 @@ export default function Home() {
             <div
               className={cn(
                 styles.scroll,
-                isScrolled && styles["scroll--hidden"],
+                isScrolled && styles["scroll--hidden"]
               )}
             >
               Scroll to discover{" "}
@@ -241,7 +267,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* About */}
+        {/* About Section */}
         <section id="about" data-scroll-section>
           <div
             data-scroll
@@ -249,15 +275,18 @@ export default function Home() {
             data-scroll-position="top"
             className="my-14 flex max-w-6xl flex-col justify-start space-y-10"
           >
-            <h2 className="py-16  pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
-            I am Eralp Kurdas, currently a data analyst intern at a financial institution, focusing on improving data quality and automation processes. 
-            My work involves analyzing incoming data and ensuring accurate reporting to optimize decision-making across departments. 
-            I aim to enhance the accrual processes through automation, reducing inefficiencies and errors.
+            <h2 className="py-16 pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
+              I am Eralp Kurdas, currently a data analyst intern at a financial
+              institution, focusing on improving data quality and automation
+              processes. My work involves analyzing incoming data and ensuring
+              accurate reporting to optimize decision-making across departments.
+              I aim to enhance the accrual processes through automation,
+              reducing inefficiencies and errors.
             </h2>
           </div>
         </section>
 
-        {/* Projects */}
+        {/* Projects Section */}
         <section id="projects" data-scroll-section>
           {/* Gradient */}
           <div className="relative isolate -z-10">
@@ -278,11 +307,13 @@ export default function Home() {
             <span className="text-gradient clash-grotesk text-sm font-semibold tracking-tighter">
               ✨ Projects
             </span>
-            <h2 className="mt-3 text-4xl font-semibold tracking-tight tracking-tighter xl:text-6xl">
+            <h2 className="mt-3 text-4xl font-semibold tracking-tight xl:text-6xl">
               Projects in the spotlight
             </h2>
             <p className="mt-1.5 text-base tracking-tight text-muted-foreground xl:text-lg">
-              I am actively developing several products. Notable projects that have reached a significant stage of development will be showcased below.
+              I am actively developing several products. Notable projects that
+              have reached a significant stage of development will be showcased
+              below.
             </p>
 
             {/* Carousel */}
@@ -290,7 +321,10 @@ export default function Home() {
               <Carousel setApi={setCarouselApi} className="w-full">
                 <CarouselContent>
                   {projects.map((project) => (
-                    <CarouselItem key={project.title} className="md:basis-1/2">
+                    <CarouselItem
+                      key={project.title}
+                      className="md:basis-1/2"
+                    >
                       <Card id="tilt">
                         <CardHeader className="p-0">
                           <Link href={project.href} target="_blank" passHref>
@@ -336,7 +370,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Services */}
+        {/* Services Section with Downloadable Products */}
         <section id="products" data-scroll-section>
           <div
             data-scroll
@@ -363,9 +397,11 @@ export default function Home() {
                   </span>
                 </h2>
                 <p className="mt-2 tracking-tighter text-secondary-foreground">
-                  Here are all the products i made with hyperlinks for easy access
+                  Here are all the products I made with hyperlinks for easy access.
                 </p>
               </div>
+
+              {/* Loop through each product */}
               {products.map((service) => (
                 <div
                   key={service.service}
@@ -378,6 +414,23 @@ export default function Home() {
                   <span className="mt-2 tracking-tighter text-muted-foreground">
                     {service.description}
                   </span>
+
+                  {/* If the product has downloads, render them */}
+                  {service.downloads.length > 0 && (
+                    <ul className="mt-4">
+                      {service.downloads.map((download, idx) => (
+                        <li key={idx}>
+                          <a
+                            href={download.href}
+                            download
+                            className="text-primary underline"
+                          >
+                            {download.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
             </motion.div>
